@@ -1,36 +1,211 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-header {
-  padding: 1%;
+.hero-section {
+  position: relative;
+  width: 100%;
+  /* height: 100vh; */
+}
+nav {
+  position: relative;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-header nav {
+nav h1 {
+  padding-left: 34px;
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: "Pacifico", cursive;
+}
+nav ul {
   display: flex;
-}
-header h1 {
-  padding: 1%;
-}
-ul {
-  list-style: none;
-  display: flex;
-  gap: 5rem;
-}
-ul a {
-  text-decoration: none;
-  color: blueviolet;
-}
-.login-signup {
-  display: flex;
+  justify-content: space-between;
   gap: 2rem;
-  margin-right: 5%;
+  list-style: none;
 }
-.login-signup button {
-  padding: 0 10% 0 10%;
-  border-radius: 5px;
+nav ul li a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 42px;
+  font-family: "Outfit", sans-serif;
+}
+nav ul li a:hover {
+  color: blue;
+  background-color: aqua;
+}
+
+nav .login-signup {
+  display: flex;
+  gap: 30px;
+  padding-right: 34px;
+}
+nav .login-signup button {
+  padding: 10px 30px;
   border: none;
-  background-color: blueviolet;
-  color: aliceblue;
+  border-radius: 42px;
+  font-size: 1rem;
+  font-family: "Outfit", sans-serif;
+}
+nav .login-signup .login {
+  background-color: transparent;
+  border: 5px solid;
+  /* border-image: linear-gradient(to right, #684aa9, #cb5e0f) ; */
+  /* border-radius: 42px; */
+  cursor: pointer;
+}
+nav .login-signup .signup {
+  background: linear-gradient(to right, #5d2dc3, #cb5e0f);
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+.hero-section .bg-image img {
+  /* position: absolute; */
+  top: 5;
+  width: 100%;
+  height: 130vh;
+}
+
+.hero-section .hero-text {
+  position: absolute;
+  top: 15%;
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5rem;
+}
+.hero-section .hero-text p {
+  font-size: 2rem;
+  color: #8564e3;
+  padding-bottom: 2rem;
+  font-weight: 100;
+  font-family: "Inter", sans-serif;
+}
+.hero-section .hero-text h2 {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+  font-family: "Overpass Mono", monospace;
+}
+.hero-section .hero-text h3 {
+  font-size: 1.8rem;
+  padding-bottom: 3rem;
+  color: #482597;
+}
+.hero-section .hero-text button {
+  width: 30%;
+  padding: 20px 0 20px 0;
+  text-align: center;
+  border: none;
+  background-color: #7c2ae4;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.hero-section .devices .laptop img {
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  width: 35%;
+  height: 30%;
+}
+.hero-section .devices .tablet img {
+  position: absolute;
+  top: 35%;
+  right: 5%;
+  width: 15%;
+  height: 15%;
+}
+.hero-section .devices .mobile img {
+  position: absolute;
+  top: 30%;
+  right: 32%;
+  width: 7.5%;
+  height: 20%;
+}
+.hero-section .devices .arrow img {
+  position: absolute;
+  top: 46%;
+  left: 12%;
+  width: 15%;
+  height: 20%;
+  rotate: 30deg;
+}
+
+/* Feature Section CSS */
+.feature {
+  width: 100%;
+  height: 100vh;
+}
+.feature .bg-image img {
+  width: 90%;
+  position: relative;
+  opacity: 0.7;
+}
+.feature .text {
+  padding-bottom: 5rem;
+}
+.feature h2 {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: #7f0ada;
+  font-size: 32px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.feature p {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Overpass Mono", monospace;
+}
+.feature .cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.feature .cards .box {
+  width: 25%;
+  height: 450px;
+  /* border: 1px solid black; */
+  background-color: #e3e9ec;
+  position: relative;
+}
+.feature .cards .box img {
+  position: absolute;
+  width: 7rem;
+  height: 7rem;
+  /* align-items: center; */
+  top: 15%;
+  left: 35%;
+}
+.feature .cards .box .inner-text {
+  position: absolute;
+  top: 50%;
+}
+.feature .cards .box .inner-text h3 {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+.feature .cards .box .inner-text p {
+  text-align: center;
+  font-size: 1rem;
+}
+.feature .cards .box button {
+  position: absolute;
+  bottom: 5%;
+  left: 30%;
+  width: 40%;
+  padding: 20px 0 20px 0;
+  text-align: center;
+  border: 1px solid #5d2dc3;
+  background-color: transparent;
+  color: #5d2dc3;
+  border-radius: 15px;
+  cursor: pointer;
 }

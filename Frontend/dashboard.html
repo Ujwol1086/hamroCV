@@ -5,22 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>hamroCV</title>
     <link rel="stylesheet" href="dashboard.css" />
+    <!-- <link rel="stylesheet" href="bootstrap.min.css" /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <nav>
+    <section class="hero-section">
+      <nav class="navbar">
         <h1>hamroCV</h1>
-        <ul>
-          <li>Home</li>
-          <li>Template</li>
-          <li>Word Template</li>
-          <li>Order Resume</li>
+        <ul class="navbar">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Template</a></li>
+          <li><a href="#">Word Template</a></li>
+          <li><a href="#">Order Resume</a></li>
         </ul>
         <div class="login-signup">
-          <button>Login</button>
-          <button>Signup</button>
+          <button class="login" stroke="#5d2dc3">Login</button>
+          <button class="signup"><p>Signup</p></button>
         </div>
       </nav>
-    </header>
+      <div class="bg-image">
+        <img src="./Images/Assets/Hero-bg.png" alt="" />
+        <div class="parallex"></div>
+      </div>
+      <div class="hero-text">
+        <p>HELLO, Welcome to hamroCV</p>
+        <h2>
+          Create a <br />
+          compelling CV with <br />
+          AI assistance in <br />
+          minutes.
+        </h2>
+        <h3>Online resume builder with AI assistance</h3>
+        <button>Get Started</button>
+      </div>
+      <div class="devices">
+        <div class="laptop">
+          <img src="./Images/Assets/CVLAptop.png" alt="" />
+        </div>
+        <div class="tablet">
+          <img src="./Images/Assets/cvpad.png" alt="" />
+        </div>
+        <div class="mobile">
+          <img src="./Images/Assets/mobileCV.png" alt="" />
+        </div>
+        <div class="arrow">
+          <img src="./Images/Assets/arrow.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="feature">
+      <div class="bg-image">
+        <img src="./Images/Assets/normal-bg.png" alt="" />
+      </div>
+      <div class="text">
+        <h2>Create A Resume in Minutes</h2>
+        <p>Our Features</p>
+      </div>
+      <div class="cards">
+        <div class="box">
+          <img src="./Images/Assets/features-resume.png" alt="" />
+          <div class="inner-text">
+            <h3>Create Resume</h3>
+            <p>Create a professional-quality resume in minutes</p>
+          </div>
+          <button>Create New Resume</button>
+        </div>
+        <div class="box"></div>
+        <div class="box"></div>
+      </div>
+    </section>
   </body>
 </html>
