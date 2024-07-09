@@ -34,10 +34,6 @@ nav ul li a {
   border-radius: 42px;
   font-family: "Outfit", sans-serif;
 }
-nav ul li a:hover {
-  color: blue;
-  background-color: aqua;
-}
 
 nav .login-signup {
   display: flex;
@@ -141,14 +137,21 @@ nav .login-signup .signup {
 .feature {
   width: 100%;
   height: 100vh;
+  position: relative;
 }
 .feature .bg-image img {
-  width: 90%;
-  position: relative;
-  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.feature .feature-content {
+  position: absolute;
 }
 .feature .text {
   padding-bottom: 5rem;
+  position: absolute;
+  left: 35%;
+  top: 4%;
 }
 .feature h2 {
   text-align: center;
@@ -156,7 +159,8 @@ nav .login-signup .signup {
   color: #7f0ada;
   font-size: 32px;
   padding-top: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 2rem;
+  font-weight: normal;
 }
 .feature p {
   text-align: center;
@@ -168,44 +172,49 @@ nav .login-signup .signup {
   width: 100%;
   display: flex;
   justify-content: space-around;
+  padding-top: 15%;
 }
 .feature .cards .box {
-  width: 25%;
-  height: 450px;
-  /* border: 1px solid black; */
-  background-color: #e3e9ec;
+  align-items: center;
+  width: 380px;
+  height: 422px;
+  background-color: rgba(227, 233, 236, 0.5);
   position: relative;
 }
+
 .feature .cards .box img {
   position: absolute;
-  width: 7rem;
-  height: 7rem;
-  /* align-items: center; */
-  top: 15%;
+  width: 124px;
+  height: 124px;
+  top: 10%;
   left: 35%;
 }
 .feature .cards .box .inner-text {
-  position: absolute;
-  top: 50%;
+  /* position: absolute; */
+  padding-top: 45%;
 }
-.feature .cards .box .inner-text h3 {
-  text-align: center;
-  padding-bottom: 2rem;
+.feature .cards .box .inner-text h2 {
+  color: black;
+  font-family: "overpass mono", monospace;
+  font-weight: 600;
+  font-size: 30px;
 }
 .feature .cards .box .inner-text p {
-  text-align: center;
-  font-size: 1rem;
+  margin: auto;
+  font-size: 18px;
+  font-family: "inter", sans-serif;
+  font-weight: 500;
 }
 .feature .cards .box button {
-  position: absolute;
-  bottom: 5%;
-  left: 30%;
-  width: 40%;
-  padding: 20px 0 20px 0;
+  text-align: center;
+  margin: 5% 0 0 19%;
+  width: 60%;
+  padding: 15px;
   text-align: center;
   border: 1px solid #5d2dc3;
   background-color: transparent;
   color: #5d2dc3;
   border-radius: 15px;
   cursor: pointer;
+  font-size: 20px;
 }
