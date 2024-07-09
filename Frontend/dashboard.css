@@ -247,6 +247,10 @@ nav .login-signup .signup {
   padding-top: 2rem;
   padding-right: 1rem;
 }
+.intro .intro-content .text-content h2 {
+  font-family: "inter", sans-serif;
+  font-size: 30px;
+}
 .intro .intro-content .innerText-content {
   display: flex;
   gap: 4rem;
