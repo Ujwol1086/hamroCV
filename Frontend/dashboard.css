@@ -218,3 +218,84 @@ nav .login-signup .signup {
   cursor: pointer;
   font-size: 20px;
 }
+
+/* Intro Section */
+.intro {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.intro .bg-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.intro .intro-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  gap: 10%;
+  top: 10%;
+}
+.intro .intro-content .image-content img {
+  width: 35rem;
+  height: 75%;
+  padding-left: 20%;
+}
+.intro .intro-content .text-content {
+  padding-top: 2rem;
+  padding-right: 1rem;
+}
+.intro .intro-content .innerText-content {
+  display: flex;
+  gap: 4rem;
+  padding-top: 10%;
+}
+.intro .intro-content .innerText-content p {
+  font-family: "inter", sans-serif;
+}
+.intro .intro-content .innerText-content .left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.intro .intro-content .innerText-content .left-content .icon-text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.intro .intro-content .innerText-content .left-content .icon-text img {
+  width: 50px;
+  height: 50px;
+}
+.intro .intro-content .innerText-content .left-content .icon-text p {
+  font-family: "overpass mono", monospace;
+  font-weight: 600;
+}
+.intro .intro-content .innerText-content .left-content p {
+  padding-bottom: 1rem;
+}
+
+.intro .intro-content .innerText-content .right-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.intro .intro-content .innerText-content .right-content .icon-text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.intro .intro-content .innerText-content .right-content .icon-text img {
+  width: 50px;
+  height: 50px;
+}
+.intro .intro-content .innerText-content .right-content .icon-text p {
+  font-family: "overpass mono", monospace;
+  font-weight: 600;
+}
+.intro .intro-content .innerText-content .right-content p {
+  padding-bottom: 1rem;
+}
