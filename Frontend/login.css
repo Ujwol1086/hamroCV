@@ -39,10 +39,6 @@
   height: 70%;
   border: 1px solid;
   border-radius: 25px;
-  position: relative;
-}
-form{
-  position: absolute;
 }
 body{
   display: flex;
@@ -50,7 +46,7 @@ body{
   align-items: center; 
   min-height: 100vh;
 }
-.login{
+.login-box{
   width: 333px;
   height: 322px;
   color: white;
@@ -59,7 +55,7 @@ body{
   box-shadow: 4px 4px 10px rgb(255, 255, 255);
   text-align: center;
 }
-.login h1{
+.login-box h1{
   text-align: center;
   font-size: 35px;
   font-weight: 400;
