@@ -32,13 +32,25 @@
   /* border: 1px solid; */
   display: flex;
   align-items: center;
-  gap: 20%;
+  gap: 10%;
 }
 .login-container .login-content .login-box {
-  width: 45%;
+  width: 100%;
   height: 70%;
   border: 1px solid;
   border-radius: 25px;
+<<<<<<< HEAD
+=======
+  position: relative;
+}
+<<<<<<< HEAD
+.login-container .login-content .login-text h1 {
+  font-family: "Pacifico", cursive;
+}
+=======
+form{
+  position: absolute;
+>>>>>>> 5dca5f2033e1d1d51726884c3008bc3774fee089
 }
 body{
   display: flex;
@@ -101,3 +113,4 @@ body{
   font-weight: 600;
   font-size: 20px;
 }
+>>>>>>> 6bac1daf461d65a1e83f31c3f205857486c5a6fa
