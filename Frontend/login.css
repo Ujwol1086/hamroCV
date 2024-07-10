@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.login {
+  width: 100%;
+  height: 100vh;
+}
+.login-container {
+  position: relative;
+  width: 60%;
+  height: 70%;
+  /* border: 1px solid; */
+  border-radius: 25px;
+  box-shadow: 0 0 5px black;
+  margin: 5% auto;
+}
+.login-container img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 25px;
+  object-fit: cover;
+}
+.login-container .login-content {
+  position: absolute;
+  top: 0;
+  left: 5%;
+  width: 90%;
+  height: 100%;
+  /* border: 1px solid; */
+  display: flex;
+  align-items: center;
+  gap: 20%;
+}
+.login-container .login-content .login-box {
+  width: 45%;
+  height: 70%;
+  border: 1px solid;
+  border-radius: 25px;
+}
