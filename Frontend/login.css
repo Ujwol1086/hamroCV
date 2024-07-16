@@ -35,9 +35,64 @@
   height: 60%;
 }
 .login .login-container .login-content .left .left-text {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+  color: #ffffff;
+}
+.login .login-container .login-content .left .left-text h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 3rem;
+  font-weight: 500;
+}
+.login .login-container .login-content .left .left-text p {
+  font-family: "Inter", sans-serif;
 }
 .login .login-container .login-content .right {
   width: 60%;
   height: 100%;
-  border: 1px solid;
+}
+.login .login-container .login-content .right .login-box {
+  width: 50%;
+  height: 65%;
+  margin: 5rem auto;
+  border-radius: 10%;
+  box-shadow: 2px 3px 5px black;
+  background-image: linear-gradient(to bottom, #43c3f9, #be4fd8);
+  color: #ffffff;
+  text-align: center;
+  padding: 3rem;
+}
+.login .login-container .login-content .right .login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 50px;
+}
+.login .login-container .login-content .right .login-box form input {
+  width: 100%;
+  background: transparent;
+  padding: 4%;
+  border-radius: 15px;
+  border: 1px solid white;
+  color: #ffffff;
+}
+.login .login-container .login-content .right .login-box form button {
+  width: 35%;
+  padding: 3%;
+  border-radius: 20px;
+  background-color: #e15690;
+  border: none;
+  margin-top: 20px;
+  color: #ffffff;
+}
+.login .login-container .login-content .right .login-box .right-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.login .login-container .login-content .right .login-box .right-text p a {
+  text-decoration: none;
+  color: #e15690;
 }
