@@ -62,6 +62,8 @@ nav .login-signup .signup {
   color: whitesmoke;
 }
 
+/* Hero Section */
+
 .hero-section .bg-image img {
   /* position: absolute; */
   top: 5;
@@ -323,7 +325,7 @@ nav .login-signup .signup {
 .working h2 {
   text-align: center;
   font-family: "Inter", sans-serif;
-  color: #7f0ada;
+  color: #c23b7f;
   font-size: 32px;
   padding-top: 30px;
   padding-bottom: 2rem;
@@ -343,9 +345,9 @@ nav .login-signup .signup {
 }
 .working .cards .box {
   align-items: center;
-  width: 380px;
-  height: 422px;
-  background-color: rgba(227, 233, 236, 0.5);
+  width: 402px;
+  height: 354px;
+  background-color: rgba(255, 255, 255);
   position: relative;
 }
 
@@ -353,7 +355,7 @@ nav .login-signup .signup {
   position: absolute;
   width: 124px;
   height: 124px;
-  top: 10%;
+  top: 30%;
   left: 35%;
 }
 .working .cards .box .inner-text {
@@ -371,17 +373,4 @@ nav .login-signup .signup {
   font-size: 18px;
   font-family: "inter", sans-serif;
   font-weight: 500;
-}
-.working .cards .box button {
-  text-align: center;
-  margin: 5% 0 0 19%;
-  width: 60%;
-  padding: 15px;
-  text-align: center;
-  border: 1px solid #5d2dc3;
-  background-color: transparent;
-  color: #5d2dc3;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 20px;
 }

@@ -8,90 +8,36 @@
   height: 100vh;
 }
 .login-container {
-  position: relative;
-  width: 60%;
-  height: 70%;
-  /* border: 1px solid; */
-  border-radius: 25px;
-  box-shadow: 0 0 5px black;
-  margin: 5% auto;
+  width: 100%;
+  height: 100vh;
 }
 .login-container img {
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  border-radius: 25px;
   object-fit: cover;
 }
 .login-container .login-content {
   position: absolute;
   top: 0;
-  left: 5%;
-  width: 90%;
-  height: 100%;
-  /* border: 1px solid; */
-  display: flex;
-  align-items: center;
-  gap: 10%;
-}
-.login-container .login-content .login-box {
   width: 100%;
-  height: 70%;
+  height: 100%;
+  display: flex;
+  /* align-items: center; */
+}
+.login-container .login-content .left {
+  width: 40%;
+  height: 100%;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.login .login-container .login-content .left img {
+  width: 100%;
+  height: 60%;
+}
+.login .login-container .login-content .left .left-text {
+}
+.login .login-container .login-content .right {
+  width: 60%;
+  height: 100%;
   border: 1px solid;
-  border-radius: 25px;
-}
-.login-box {
-  width: 333px;
-  height: 322px;
-  color: white;
-  background-color: #141729;
-  border-radius: 42px;
-  box-shadow: 4px 4px 10px rgb(255, 255, 255);
-  text-align: center;
-}
-.login-box h1 {
-  text-align: center;
-  font-size: 35px;
-  font-weight: 400;
-  padding-top: 20px;
-}
-.input-box input {
-  width: 260px;
-  height: 34;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  border: 2px solid white;
-  border-radius: 15px;
-  color: white;
-  padding: 10px 45px 10px 15px;
-  margin: 12px;
-}
-.input-box input::placeholder {
-  color: white;
-}
-.login-button {
-  width: 121px;
-  height: 34px;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  border: 2px solid #e15690;
-  background-color: #e15690;
-  border-radius: 25px;
-  color: white;
-  padding: 5px 45px 10px 35px;
-  cursor: pointer;
-  margin: 12px;
-}
-.login .signup-link {
-  font-size: 20px;
-}
-.signup-link p a {
-  text-decoration: none;
-  color: #e15690;
-  font-weight: 600;
-  font-size: 20px;
 }
