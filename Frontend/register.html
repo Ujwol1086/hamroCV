@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="login.css" />
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css" />
     <!-- <link rel="stylesheet" href="bootstrap.min.css" /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,10 +14,10 @@
     />
   </head>
   <body>
-    <section class="login">
-      <div class="login-container">
+    <section class="register">
+      <div class="register-container">
         <img src="./Images/Assets/login-bg.jpg" alt="" />
-        <div class="login-content">
+        <div class="register-content">
           <div class="left">
             <img src="./Images/Assets/loginBox.png" alt="" />
             <div class="left-text">
@@ -30,9 +30,19 @@
             </div>
           </div>
           <div class="right">
-            <div class="login-box">
-              <h3>Login</h3>
+            <div class="register-box">
+              <h3>Register</h3>
               <form action="">
+                <div class="input-box">
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="name">Full Name</label>
+                </div>
                 <div class="input-box">
                   <input
                     type="email"
@@ -43,7 +53,7 @@
                   />
                   <label for="mail">Email</label>
                 </div>
-                <div class="input-box pass">
+                <div class="input-box">
                   <input
                     type="password"
                     name="pass"
@@ -53,12 +63,22 @@
                   />
                   <label for="pass">Password</label>
                 </div>
-                <div>
-                  <button>Login</button>
+                <div class="input-box">
+                  <input
+                    type="cpassword"
+                    name="cpass"
+                    id="cpass"
+                    autocomplete="off"
+                    required
+                  />
+                  <label for="cpass">Confirm Password</label>
                 </div>
-                <div class="right-text">
-                  <p>Don't Have An Account?</p>
-                  <p><a href="register.html">Sign Up</a></p>
+                <div>
+                  <button>Register</button>
+                  <div class="right-text">
+                    <p>Already Have Account?</p>
+                    <p><a href="login.html">Sign In</a></p>
+                  </div>
                 </div>
               </form>
             </div>
