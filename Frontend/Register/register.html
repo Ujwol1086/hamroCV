@@ -32,7 +32,8 @@
           <div class="right">
             <div class="register-box">
               <h3>Register</h3>
-              <form action="">
+
+              <form action="" onsubmit="return validate()">
                 <div class="input-box">
                   <input
                     type="text"
@@ -65,7 +66,7 @@
                 </div>
                 <div class="input-box">
                   <input
-                    type="cpassword"
+                    type="cpassword" 
                     name="cpass"
                     id="cpass"
                     autocomplete="off"
@@ -86,5 +87,6 @@
         </div>
       </div>
     </section>
+    <script src="../Backend/register.js"></script>
   </body>
 </html>
