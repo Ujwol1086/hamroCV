@@ -1182,7 +1182,7 @@
 
   .templates {
     width: 100%;
-    height: 100vh;
+    height: auto;
     background-color: #f5f2f2;
   }
   .templates h2 {
@@ -1200,7 +1200,16 @@
     font-weight: bold;
     font-family: "Overpass Mono", monospace;
   }
-
+  .templates .template-image {
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    padding: 50px 20px 0 50px;
+  }
+  .templates .template-image img {
+    width: 95%;
+    height: 95%;
+  }
   /* Footer */
   footer {
     background-color: #222;
@@ -1333,10 +1342,11 @@
   }
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
-  
+
   height: 100%;
   width: 100%;
 }
