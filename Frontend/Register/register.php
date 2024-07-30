@@ -32,7 +32,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Execute and check for success
     if ($stmt->execute()) {
-        echo "Registration successful. <a href='login.html'>Login here</a>";
+        // Redirect to login page after successful registration
+        header("Location: login.html");
+        exit();
     } else {
         echo "Error: " . $stmt->error;
     }
@@ -42,4 +44,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 $conn->close();
-
+?>
