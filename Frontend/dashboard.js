@@ -5,6 +5,7 @@ ScrollReveal({
     duration: 1500,
     delay: 200
 });
+
 ScrollReveal().reveal('.laptop', { origin: 'left' });
 ScrollReveal().reveal('.tablet', { origin: 'right' });
 ScrollReveal().reveal('.mobile', { origin: 'bottom' });
