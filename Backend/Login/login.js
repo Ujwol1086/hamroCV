@@ -38,5 +38,12 @@ function validate() {
         return false;
     }
 
-    return true;
+    alert("Login successful");
+
+    // Redirect after alert is dismissed
+    setTimeout(() => {
+        window.location.href = '../../Frontend/dashboard.html';
+    }, 0); // 0 milliseconds delay is used to ensure redirect happens after alert
+
+    return false; // Prevent form submission
 }
