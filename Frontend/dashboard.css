@@ -1332,3 +1332,20 @@
     gap: 10px;
   }
 }
+
+body, html {
+  margin: 0;
+  padding: 0;
+  
+  height: 100%;
+  width: 100%;
+}
+.lottie-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: rotate(270deg); /* Rotate the container */
+}
