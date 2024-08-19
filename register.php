@@ -18,7 +18,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $sql = "INSERT INTO register (fullname, email, pass) VALUES ('$fullname', '$email', '$pass')";
     if (mysqli_query($conn, $sql)) {
-        header("location: ../Login/login.html");
+        header("location: login.html");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
