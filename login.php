@@ -21,7 +21,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: dashboard.html");
         exit;
     } else {
-        echo "Invalid email or password!";
+        echo "<h1>Incorrect email or password. Please try again.</h1>";
+        header("Location: login.html");
     }
     
 }

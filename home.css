@@ -1,0 +1,570 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hamburger-menu i {
+  display: none;
+  position: fixed;
+  top: 1.5rem;
+  right: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  /* height: 100vh; */
+}
+nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav h1 {
+  padding-left: 34px;
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: "Pacifico", cursive;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  list-style: none;
+}
+nav ul li a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 42px;
+  font-family: "Outfit", sans-serif;
+}
+nav .login-signup {
+  display: flex;
+  gap: 30px;
+  padding-right: 34px;
+}
+nav .login-signup button {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 42px;
+  font-size: 1rem;
+  font-family: "Outfit", sans-serif;
+}
+nav .login-signup button a {
+  text-decoration: none;
+  color: black;
+}
+nav .login-signup .login {
+  position: relative;
+  background-color: white;
+  cursor: pointer;
+}
+nav .login-signup .login::after {
+  position: absolute;
+  content: "";
+  height: 109%;
+  width: 103%;
+  background-image: linear-gradient(to right, #5d2dc3, #cb5e0f);
+  left: -1.5%;
+  top: -3%;
+  z-index: -1;
+  border-radius: 42px;
+}
+nav .login-signup .login a {
+  color: #8564e3;
+}
+nav .login-signup .signup {
+  background: linear-gradient(to right, #5d2dc3, #cb5e0f);
+  cursor: pointer;
+}
+nav .login-signup .signup a {
+  color: whitesmoke;
+}
+
+/* Hero Section */
+
+.hero-section .bg-image img {
+  /* position: absolute; */
+  top: 5;
+  width: 100%;
+  height: 130vh;
+}
+
+.hero-section .hero-text {
+  position: absolute;
+  top: 15%;
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-left: 5rem;
+}
+.hero-section .hero-text p {
+  font-size: 2rem;
+  color: #8564e3;
+  padding-bottom: 2rem;
+  font-weight: 100;
+  font-family: "Inter", sans-serif;
+}
+.hero-section .hero-text h2 {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+  font-family: "Overpass Mono", monospace;
+}
+.hero-section .hero-text h3 {
+  font-size: 1.8rem;
+  padding-bottom: 3rem;
+  color: #482597;
+}
+.hero-section .hero-text button {
+  width: 30%;
+  padding: 20px 0 20px 0;
+  text-align: center;
+  border: none;
+  background-color: #7c2ae4;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.hero-section .devices .laptop img {
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  width: 35%;
+  height: 30%;
+}
+.hero-section .devices .tablet img {
+  position: absolute;
+  top: 35%;
+  right: 5%;
+  width: 15%;
+  height: 15%;
+}
+.hero-section .devices .mobile img {
+  position: absolute;
+  top: 30%;
+  right: 32%;
+  width: 7.5%;
+  height: 20%;
+}
+.hero-section .devices .arrow img {
+  position: absolute;
+  top: 46%;
+  left: 12%;
+  width: 15%;
+  height: 20%;
+  rotate: 30deg;
+}
+
+/* Feature Section CSS */
+.feature {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.feature .bg-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.feature .feature-content {
+  position: absolute;
+}
+.feature .text {
+  padding-bottom: 5rem;
+  position: absolute;
+  left: 35%;
+  top: 4%;
+}
+.feature h2 {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: #9738e1;
+  font-size: 32px;
+  padding-top: 30px;
+  padding-bottom: 2rem;
+  font-weight: normal;
+}
+.feature p {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Overpass Mono", monospace;
+}
+.feature .cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 15%;
+}
+.feature .cards .box {
+  align-items: center;
+  width: 380px;
+  height: 422px;
+  background-color: rgba(227, 233, 236, 0.5);
+  position: relative;
+}
+.feature .cards .box img {
+  position: absolute;
+  width: 124px;
+  height: 124px;
+  top: 10%;
+  left: 35%;
+}
+.feature .cards .box .inner-text {
+  /* position: absolute; */
+  padding-top: 45%;
+}
+.feature .cards .box .inner-text h2 {
+  color: black;
+  font-family: "overpass mono", monospace;
+  font-weight: 600;
+  font-size: 30px;
+}
+.feature .cards .box .inner-text p {
+  margin: auto;
+  font-size: 18px;
+  font-family: "inter", sans-serif;
+  font-weight: 500;
+}
+.feature .cards .box button {
+  text-align: center;
+  margin: 5% 0 0 19%;
+  width: 60%;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #5d2dc3;
+  background-color: transparent;
+  color: #5d2dc3;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Intro Section */
+.intro {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.intro .intro-bg-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.intro .intro-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  gap: 10%;
+  top: 10%;
+}
+.intro .intro-content .image-content img {
+  width: 35rem;
+  height: 75%;
+  padding-left: 10%;
+}
+.intro .intro-content .text-content {
+  padding-top: 2rem;
+  padding-right: 1rem;
+}
+.intro .intro-content .text-content h2 {
+  font-family: "inter", sans-serif;
+  font-size: 30px;
+}
+.intro .intro-content .innerText-content {
+  display: flex;
+  gap: 2.5rem;
+  padding-top: 7%;
+}
+.intro .intro-content .innerText-content p {
+  font-family: "inter", sans-serif;
+}
+.intro .intro-content .innerText-content .left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.intro .intro-content .innerText-content .left-content .icon-text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.intro .intro-content .innerText-content .left-content .icon-text img {
+  width: 50px;
+  height: 50px;
+}
+.intro .intro-content .innerText-content .left-content .icon-text p {
+  font-family: "overpass mono", monospace;
+  font-weight: 600;
+}
+.intro .intro-content .innerText-content .left-content p {
+  padding-bottom: 1rem;
+}
+.intro .intro-content .innerText-content .right-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.intro .intro-content .innerText-content .right-content .icon-text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.intro .intro-content .innerText-content .right-content .icon-text img {
+  width: 50px;
+  height: 50px;
+}
+.intro .intro-content .innerText-content .right-content .icon-text p {
+  font-family: "overpass mono", monospace;
+  font-weight: 600;
+}
+.intro .intro-content .innerText-content .right-content p {
+  padding-bottom: 1rem;
+}
+
+/* Working Section CSS */
+.working {
+  width: 100%;
+  height: 100vh;
+  background-color: #f5f2f2;
+}
+/* .working .bg-image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+} */
+.working .text {
+  /* padding-bottom: 5rem; */
+  /* position: absolute; */
+  left: 35%;
+  top: 4%;
+}
+.working h2 {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: #9738e1;
+  font-size: 32px;
+  padding-top: 30px;
+  padding-bottom: 2rem;
+  font-weight: normal;
+}
+.working .cards h2 {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: #c23b7f;
+  font-size: 32px;
+  padding-top: 30px;
+  padding-bottom: 2rem;
+  font-weight: normal;
+}
+.working p {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Overpass Mono", monospace;
+}
+.working .cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5%;
+}
+.working .cards .box {
+  align-items: center;
+  width: 402px;
+  height: 354px;
+  background-color: rgba(255, 255, 255);
+  position: relative;
+}
+
+.working .cards .box img {
+  position: absolute;
+  width: 124px;
+  height: 124px;
+  top: 30%;
+  left: 35%;
+}
+.working .cards .box .inner-text {
+  /* position: absolute; */
+  padding-top: 45%;
+}
+.working .cards .box .inner-text h2 {
+  color: black;
+  font-family: "overpass mono", monospace;
+  font-weight: 600;
+  font-size: 30px;
+}
+.working .cards .box .inner-text p {
+  margin: auto;
+  font-size: 18px;
+  font-family: "inter", sans-serif;
+  font-weight: 500;
+}
+
+.templates {
+  width: 100%;
+  height: auto;
+  background-color: #f5f2f2;
+}
+.templates h2 {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  color: #9738e1;
+  font-size: 32px;
+  padding-top: 30px;
+  padding-bottom: 2rem;
+  font-weight: normal;
+}
+.templates p {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Overpass Mono", monospace;
+}
+.templates .template-image {
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  padding: 50px 20px 0 50px;
+}
+.templates .template-image img {
+  width: 95%;
+  height: 95%;
+}
+/* Footer */
+footer {
+  background-color: #222;
+  color: #ccc;
+  padding: 40px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 85%;
+  margin: auto;
+  border-bottom: 0.5px solid whitesmoke;
+}
+
+.footer-section {
+  /* flex: 1; */
+  width: 270px;
+  margin: 20px;
+}
+
+.footer-section h2 {
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+  color: #9c9c9b;
+  font-family: "Roboto", sans-serif;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #9c9c9b;
+  transition: all 0.5s ease;
+}
+
+.footer-section a:hover {
+  color: #fff;
+}
+.social-icons {
+  padding: 5% 0;
+}
+.social-icons a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #444;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 5px;
+  transition: background-color 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: transparent;
+}
+
+.footer-bottom {
+  width: 85%;
+  text-align: center;
+  margin: 30px auto;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  padding: 10px 0;
+  color: #aaa;
+}
+
+.footer-bottom a {
+  margin-left: 15px;
+  color: #777;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.footer-bottom a:hover {
+  color: #fff;
+}
+.footer-container .contact ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-container .news ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-container .news ul li {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.footer-container .news ul li span {
+  font-size: 0.8rem;
+}
+.footer-container .contact ul li {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.footer-container .links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
