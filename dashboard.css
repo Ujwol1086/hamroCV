@@ -304,3 +304,13 @@ aside {
   justify-content: center;
   align-items: center;
 }
+footer {
+  padding: 30px;
+  text-align: center;
+}
+footer p {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+}
