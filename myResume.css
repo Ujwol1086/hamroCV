@@ -145,7 +145,7 @@ aside {
 .container {
   width: 100%;
   height: auto;
-  margin-top: 4rem;
+  margin-top: 3rem;
 }
 .container .box {
   border: 2px solid #925bf8;
@@ -170,24 +170,98 @@ aside {
   font-size: 1.2rem;
   font-weight: 600;
 }
-
-.container .comments {
-  margin-top: 30px;
-  width: 70%;
-  padding: 30px 50px;
+.container .myresume {
+  background-color: #ffffff;
+  border-radius: 20px;
+  margin-top: 50px;
+  width: 45%;
+  height: 200px;
+  padding: 20px 30px;
+  display: flex;
+  /* align-items: center; */
+  gap: 30px;
+}
+.container .myresume .resume-image {
+  width: 25%;
+  height: 160px;
+}
+.container .myresume .resume-image img {
+  width: 100%;
+  height: 100%;
+}
+.container .myresume .myresume-content {
+  width: 75%;
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 10px;
 }
-.container .comments .comment-box {
-  background-color: white;
-  width: 100%;
-  height: 250px;
+.container .myresume .myresume-content h3 {
+  margin-bottom: 10px;
+}
+.container .myresume .myresume-content .completion {
+  display: flex;
+  justify-content: space-between;
+}
+.container .myresume .myresume-content .buttons {
+  display: flex;
+  gap: 20px;
+}
+.container .myresume .myresume-content .buttons .edit {
+  width: 25%;
+  border: 2px solid #763fc9;
+  padding: 5px;
   border-radius: 20px;
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.container .myresume .myresume-content .buttons .edit p {
+  color: #6e3bbd;
+  font-size: 16px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+}
+.container .myresume .myresume-content .buttons .edit img {
+  width: 14px;
+  height: 14px;
+}
+.container .myresume .myresume-content .buttons .other-btn {
+  display: flex;
+  gap: 10px;
+}
+.container .myresume .myresume-content .buttons .other-btn button {
+  width: 60px;
+  border: 2px solid #763fc9;
+  padding: 5px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.container .myresume .myresume-content .buttons .other-btn button img {
+  width: 20px;
+  height: 20px;
+}
+.container .myresume .myresume-content .buttons .other-btn .more1 img {
+  rotate: 90deg;
+}
+.progress-container {
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 25px;
   overflow: hidden;
 }
 
+.progress-bar {
+  height: 10px;
+  width: 50%;
+  background-color: #4caf50;
+  text-align: center;
+  line-height: 25px;
+  color: white;
+  border-radius: 25px 0 0 25px;
+  transition: width 0.5s ease-in-out;
+}
 footer {
   padding: 15px;
   text-align: center;
