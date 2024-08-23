@@ -21,8 +21,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: dashboard.html");
         exit;
     } else {
-        echo "<h1>Incorrect email or password. Please try again.</h1>";
-        header("Location: login.html");
+        echo "<script>
+        alert('Incorrect email or password. Please try again.');
+        setTimeout(function(){
+            window.location.href = 'login.html';
+        }, 1000);
+    </script>";
+
     }
     
 }
