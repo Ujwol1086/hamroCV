@@ -304,6 +304,33 @@ aside {
   justify-content: center;
   align-items: center;
 }
+.comments .comment-box .like-dislike .post-input {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 30px;
+}
+.comments .comment-box .like-dislike .post-input input {
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: rgba(161, 160, 160, 0.2);
+}
+.comments .comment-box .like-dislike .post-input input::placeholder {
+  font-family: "Outfit", sans-serif;
+  opacity: 0.6;
+  font-size: 14px;
+}
+.comments .comment-box .like-dislike .post-input button {
+  padding: 5px;
+  border-radius: 20px;
+  width: 10%;
+  border: none;
+  background: linear-gradient(to right, #934ef5, #b173fb);
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
+}
 footer {
   padding: 30px;
   text-align: center;
