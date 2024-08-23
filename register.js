@@ -6,17 +6,17 @@ function validate()
     const fullname = document.getElementById('fullname').value;
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    const cpassword = document.getElementById('cpassword').value;
+    const cpassword = document.getElementById('cpass').value;
 
     console.log("Name:", fullname);
     console.log("Email:", email);
     console.log("Password:", password);
-    console.log("Confirm Password:", cpassword);
+    console.log("Confirm Password:", cpass);
 
     let nameR = /^[a-zA-Z\s]+$/;
     let mailR = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
-    if (fullname === "" || email === "" || password === "" || cpassword === "")
+    if (fullname === "" || email === "" || password === "" || cpass === "")
     {
         alert("All fields are required.");
         return false;
@@ -56,7 +56,7 @@ function validate()
     }
     if (!/[@$!%*?&]/.test(password))
     {
-        alert("Password must contain at least one special character (e.g., @$!%*?&).");
+        alert("Password must contain at least one special character (e.g., @$#!%*?&).");
         return false;
     }
 
