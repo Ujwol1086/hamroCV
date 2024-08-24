@@ -163,16 +163,8 @@ aside {
   align-items: center;
   gap: 4rem;
 }
-.container .form-nav .inner-nav span {
-  background-color: #a565f9;
-  padding: 10px 20px;
-  border-radius: 20px;
-  color: #ffffff;
-  font-family: "Outfit", sans-serif;
-  font-size: 17px;
-  font-weight: 500;
-}
 .container .form-nav .inner-nav ul {
+  padding-left: 20px;
   display: flex;
   list-style: none;
   gap: 4rem;
@@ -182,7 +174,15 @@ aside {
   font-family: "Outfit", sans-serif;
   text-decoration: none;
 }
-
+.container .form-nav .inner-nav ul li:nth-child(1) a {
+  background-color: #a565f9;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #ffffff;
+  font-family: "Outfit", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+}
 .container .form-nav button {
   font-family: "Outfit", sans-serif;
   color: #ffffff;
