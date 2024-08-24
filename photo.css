@@ -174,7 +174,7 @@ aside {
   font-family: "Outfit", sans-serif;
   text-decoration: none;
 }
-.container .form-nav .inner-nav ul li:nth-child(6) a {
+.container .form-nav .inner-nav ul li:nth-child(7) a {
   background-color: #a565f9;
   padding: 10px 20px;
   border-radius: 20px;
@@ -191,57 +191,46 @@ aside {
   border-radius: 20px;
   padding: 10px 20px;
 }
-.container .form-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 95%;
-  margin: 10px auto;
-  padding: 10px;
-}
 .container .inner-container {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+.container .inner-container .photo-container {
+  padding: 40px 50px;
+  display: flex;
+  justify-content: center;
+}
+.container .inner-container .photo-container .photo {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.container .inner-container .photo-container .photo .photo-image {
+  background-color: #f4f1f1;
+  border: 2px solid #cfbde7;
+  width: 200px;
+  height: 200px;
+}
+.container .inner-container .photo-container .photo a {
+  background-color: #914df5;
+  padding: 10px;
+  border-radius: 10px;
+  color: #ffffff;
+  text-decoration: underline;
+  font-family: "Outfit", sans-serif;
+}
+.container .inner-container .photo-container .photo-content {
+  width: 55%;
 }
 .container .inner-container .btn {
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
 }
-.container .inner-container .add-skill {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-.container .inner-container .add-skill img {
-  width: 50px;
-  height: 50px;
-}
-.container .form-container .form-input {
-  display: flex;
-  flex-direction: column;
-  width: 40%;
-}
-.container .form-container .form-input h2 {
-  margin-bottom: 40px;
-}
-.container .form-container .form-input label {
-  font-family: "Outfit", sans-serif;
-  font-weight: bold;
-  font-size: 17px;
-  margin-left: 10px;
-}
-.container .form-container .form-input input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 10px;
-  border: 2px solid #45049d;
-  margin-bottom: 40px;
-}
+
 .container button {
   font-family: "Outfit", sans-serif;
   color: #ffffff;
