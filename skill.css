@@ -79,7 +79,7 @@ nav h1 {
 }
 aside {
   width: 300px;
-  height: 590px;
+  height: auto;
   /* position: sticky; */
   /* left: 0; */
 }
@@ -199,6 +199,26 @@ aside {
   width: 95%;
   margin: 10px auto;
   padding: 10px;
+}
+.container .inner-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.container .inner-container .btn {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .inner-container .add-skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.container .inner-container .add-skill img {
+  width: 50px;
+  height: 50px;
 }
 .container .form-container .form-input {
   display: flex;

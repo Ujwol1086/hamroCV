@@ -174,7 +174,7 @@ aside {
   font-family: "Outfit", sans-serif;
   text-decoration: none;
 }
-.container .form-nav .inner-nav ul li:nth-child(2) a {
+.container .form-nav .inner-nav ul li:nth-child(4) a {
   background-color: #a565f9;
   padding: 10px 20px;
   border-radius: 20px;
@@ -191,15 +191,6 @@ aside {
   border-radius: 20px;
   padding: 10px 20px;
 }
-.container .form-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 95%;
-  margin: 10px auto;
-  padding: 10px;
-}
 .container .inner-container {
   display: flex;
   flex-direction: column;
@@ -209,6 +200,15 @@ aside {
   padding: 0 20px;
   display: flex;
   justify-content: space-between;
+}
+.container .form-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 95%;
+  margin: 10px auto;
+  padding: 10px;
 }
 .container .form-container .form-input {
   display: flex;
@@ -228,7 +228,14 @@ aside {
   border-radius: 10px;
   border: 2px solid #45049d;
 }
-
+.container .form-container .form-input select {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  width: 1005;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #45049d;
+}
 .container .form-container .profession-address {
   width: 1005;
   display: flex;
