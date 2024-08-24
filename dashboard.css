@@ -95,14 +95,14 @@ aside {
 .sidebar ul li:nth-child(7) {
   border: none;
 }
-.sidebar ul li:nth-child(1) {
+.sidebar ul li:nth-child(2) {
   display: flex;
   align-items: center;
   gap: 10px;
   background-color: #ffffff;
   height: 100px;
 }
-.sidebar ul li:nth-child(1) span {
+.sidebar ul li:nth-child(2) span {
   font-size: 1.5rem;
   color: #9753f6;
 }
