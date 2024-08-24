@@ -218,14 +218,7 @@ aside {
   border-radius: 10px;
   border: 2px solid #45049d;
 }
-.container .form-container .form-input select {
-  font-family: "Outfit", sans-serif;
-  font-weight: 600;
-  width: 1005;
-  padding: 10px;
-  border-radius: 10px;
-  border: 2px solid #45049d;
-}
+
 .container .form-container .profession-address {
   width: 1005;
   display: flex;
