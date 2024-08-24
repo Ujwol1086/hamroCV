@@ -1,13 +1,45 @@
 <?php
   session_start();
-
+$_SESSION['user_id'] = $row['id'];
 // Check if the user is logged in
 if (isset($_SESSION['fullName'])) {
     $userName = $_SESSION['fullName'];
+    $userid = $_SESSION['id'];
 } else {
     header("Location: login.html");
     exit();
 }
+
+$servername = "localhost"; // Change if different
+$username = "root"; // Change if different
+$password = ""; // Change if different
+$dbname = "hamroCV"; // Change if different
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Handle form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $skill_name = $_POST['skill'];
+    $skill_level = $_POST['skill_level'];
+
+    // Basic SQL query without using prepared statements
+    $sql = "INSERT INTO skills (user_id, skill_name, skill_level) VALUES ('$userid', '$skill_name', '$skill_level')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "New skill added successfully!";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+$conn->close();
+
+
 ?>
 
 <!DOCTYPE html>
@@ -121,7 +153,7 @@ if (isset($_SESSION['fullName'])) {
         </div>
       </aside>
       <main class="container">
-        <form action="#">
+        <form action="" method="post">
           <div class="form-nav">
             <div class="inner-nav">
               <ul>
@@ -139,12 +171,12 @@ if (isset($_SESSION['fullName'])) {
           <div class="inner-container">
             <div class="form-container">
               <div class="form-input">
-                <label for="jobtitle">Skill</label>
-                <input type="text" id="jobtitle" name="jobtitle" />
+                <label for="skill">Skill</label>
+                <input type="text" id="skill" name="skill" />
               </div>
               <div class="form-input">
                 <label for="employer">Level</label>
-                <select>
+                <select name="skill_level" id="skill_level">
                   <option value="select">Select</option>
                   <option value="select">Novice</option>
                   <option value="select">Beginner</option>
@@ -154,12 +186,12 @@ if (isset($_SESSION['fullName'])) {
                 </select>
               </div>
               <div class="form-input">
-                <label for="jobtitle">Skill</label>
-                <input type="text" id="jobtitle" name="jobtitle" />
+                <label for="skill">Skill</label>
+                <input type="text" id="skill" name="skill" />
               </div>
               <div class="form-input">
                 <label for="employer">Level</label>
-                <select>
+                <select name="skill_level" id="skill_level">
                   <option value="select">Select</option>
                   <option value="select">Novice</option>
                   <option value="select">Beginner</option>
@@ -169,12 +201,12 @@ if (isset($_SESSION['fullName'])) {
                 </select>
               </div>
               <div class="form-input">
-                <label for="jobtitle">Skill</label>
-                <input type="text" id="jobtitle" name="jobtitle" />
+                <label for="skill">Skill</label>
+                <input type="text" id="skill" name="skill" />
               </div>
               <div class="form-input">
                 <label for="employer">Level</label>
-                <select>
+                <select name="skill_level" id="skill_level">
                   <option value="select">Select</option>
                   <option value="select">Novice</option>
                   <option value="select">Beginner</option>
@@ -184,12 +216,12 @@ if (isset($_SESSION['fullName'])) {
                 </select>
               </div>
               <div class="form-input">
-                <label for="jobtitle">Skill</label>
-                <input type="text" id="jobtitle" name="jobtitle" />
+                <label for="skill">Skill</label>
+                <input type="text" id="skill" name="skill" />
               </div>
               <div class="form-input">
                 <label for="employer">Level</label>
-                <select>
+                <select name="skill_level" id="skill_level">
                   <option value="select">Select</option>
                   <option value="select">Novice</option>
                   <option value="select">Beginner</option>
