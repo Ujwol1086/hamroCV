@@ -75,12 +75,12 @@ nav h1 {
 .dashboard {
   background-color: #ecebf2;
   display: flex;
-  gap: 5rem;
+  gap: 2rem;
 }
 aside {
-  width: 25%;
-  height: 580px;
-  position: sticky;
+  width: 300px;
+  height: 595px;
+  /* position: sticky; */
   /* left: 0; */
 }
 .sidebar {
@@ -141,135 +141,110 @@ aside {
   font: 400;
   opacity: 0.7;
 }
-
 .container {
-  width: 100%;
-  height: auto;
-  margin-top: 3rem;
-}
-.container .box {
-  border: 2px solid #925bf8;
-  border-radius: 30px;
-  width: 30%;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
   background-color: #ffffff;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  border-radius: 30px;
+  width: 80%;
+  height: 550px;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  font-family: "Outfit", sans-serif;
 }
-.container .box:hover {
-  opacity: 0.7;
+.container .form-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  width: 100%;
+  border-bottom: 2px solid #c8bfbf;
 }
-.container a {
+.container .form-nav .inner-nav {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.container .form-nav .inner-nav span {
+  background-color: #a565f9;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #ffffff;
+  font-family: "Outfit", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+}
+.container .form-nav .inner-nav ul {
+  display: flex;
+  list-style: none;
+  gap: 4rem;
+}
+.container .form-nav .inner-nav ul li a {
+  color: #934ff5;
+  font-family: "Outfit", sans-serif;
   text-decoration: none;
 }
-.container .box img {
-  width: 25%;
-}
-.container .box p {
-  color: #5d31d9;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-.container .myresume {
-  background-color: #ffffff;
+
+.container .form-nav button {
+  font-family: "Outfit", sans-serif;
+  color: #ffffff;
+  background-color: #a565f9;
+  border: none;
   border-radius: 20px;
-  margin-top: 50px;
-  width: 45%;
-  height: 200px;
-  padding: 20px 30px;
+  padding: 10px 20px;
+}
+.container .form-container {
   display: flex;
-  /* align-items: center; */
-  gap: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 95%;
+  margin: 10px auto;
+  padding: 10px;
 }
-.container .myresume .resume-image {
-  width: 25%;
-  height: 160px;
-}
-.container .myresume .resume-image img {
-  width: 100%;
-  height: 100%;
-}
-.container .myresume .myresume-content {
-  width: 75%;
+.container .form-container .form-input {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  width: 30%;
+  margin-bottom: 30px;
 }
-.container .myresume .myresume-content h3 {
-  margin-bottom: 10px;
+.container .form-container .form-input label {
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  margin-left: 10px;
 }
-.container .myresume .myresume-content .completion {
+.container .form-container .form-input input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #45049d;
+}
+.container .form-container .form-input select {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  width: 1005;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #45049d;
+}
+.container .form-container .profession-address {
+  width: 1005;
   display: flex;
   justify-content: space-between;
 }
-.container .myresume .myresume-content .buttons {
-  display: flex;
-  gap: 20px;
-}
-.container .myresume .myresume-content .buttons .edit {
-  width: 25%;
-  border: 2px solid #763fc9;
-  padding: 5px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.container .myresume .myresume-content .buttons .edit p {
-  color: #6e3bbd;
-  font-size: 16px;
+.container button {
   font-family: "Outfit", sans-serif;
-  font-weight: 600;
-}
-.container .myresume .myresume-content .buttons .edit img {
-  width: 14px;
-  height: 14px;
-}
-.container .myresume .myresume-content .buttons .other-btn {
-  display: flex;
-  gap: 10px;
-}
-.container .myresume .myresume-content .buttons .other-btn button {
-  width: 60px;
-  border: 2px solid #763fc9;
-  padding: 5px;
+  color: #ffffff;
+  background-color: #a565f9;
+  border: none;
   border-radius: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-.container .myresume .myresume-content .buttons .other-btn button img {
-  width: 20px;
-  height: 20px;
-}
-.container .myresume .myresume-content .buttons .other-btn .more1 img {
-  rotate: 90deg;
-}
-.progress-container {
-  width: 100%;
-  background-color: #e0e0e0;
-  border-radius: 25px;
-  overflow: hidden;
-}
-
-.progress-bar {
-  height: 10px;
-  width: 50%;
-  background-color: #734ddd;
-  text-align: center;
-  line-height: 25px;
-  color: white;
-  border-radius: 25px 0 0 25px;
-  transition: width 0.5s ease-in-out;
+  padding: 10px 20px;
+  margin: 10px;
 }
 footer {
-  padding: 15px;
+  padding: 10px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 footer p {
   font-family: "Outfit", sans-serif;
