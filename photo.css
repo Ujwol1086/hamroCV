@@ -225,6 +225,50 @@ aside {
 .container .inner-container .photo-container .photo-content {
   width: 55%;
 }
+.container .inner-container .photo-container .photo-content h3,
+.container .inner-container .photo-container .photo-content p,
+.container .inner-container .photo-container .photo-content li {
+  font-family: "Outfit", sans-serif;
+}
+.container .inner-container .photo-container .photo-content p {
+  font-size: 15px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.container .inner-container .photo-container .photo-content h2 {
+  margin: 30px 0;
+}
+.container .inner-container .photo-container .photo-content ul {
+  list-style: none;
+  color: grey;
+  line-height: 1.5;
+  margin: 10px 5px;
+}
+.container .inner-container .photo-container .photo-content .social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .form-input {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  margin-bottom: 30px;
+}
+.container .form-input label {
+  font-family: "Outfit", sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.container .form-input input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #45049d;
+}
 .container .inner-container .btn {
   padding: 0 20px;
   display: flex;
