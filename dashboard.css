@@ -160,6 +160,13 @@ aside {
   top: 185px;
   right: 100px;
 }
+.container .carousel-container .box1 a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .container .carousel-container .box1,
 .container .carousel-container .box2 {
   border: 2px solid #925bf8;
