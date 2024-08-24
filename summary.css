@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+  box-shadow: 0 1px 30px rgba(0, 0, 0, 0.2);
+}
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav h1 {
+  padding-left: 34px;
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: "Pacifico", cursive;
+}
+.hamburger-menu {
+  padding-left: 4rem;
+  padding-top: 10px;
+}
+.hamburger-menu img {
+  width: 40px;
+  height: 40px;
+}
+
+.input {
+  padding-left: 4rem;
+}
+.input input {
+  background-color: #ded4ee;
+  padding: 10px;
+  border-radius: 36px;
+  border: none;
+  position: relative;
+}
+.input input::placeholder {
+  color: #f8f8f9;
+  padding-left: 10px;
+}
+.input img {
+  position: absolute;
+  top: 30px;
+  left: 34.5rem;
+  width: 20px;
+  height: 20px;
+}
+.notification-icon img {
+  margin-left: 1rem;
+  width: 20px;
+  height: 20px;
+}
+.profile {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  color: #5d31d9;
+}
+.profile img {
+  width: 30px;
+  height: 30px;
+}
+.profile h3 {
+  padding-right: 50px;
+}
+.dashboard {
+  background-color: #ecebf2;
+  display: flex;
+  gap: 2rem;
+}
+aside {
+  width: 300px;
+  height: 590px;
+  /* position: sticky; */
+  /* left: 0; */
+}
+.sidebar {
+  padding-top: 5px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #8740f2 0%, #9653f5 29%, #bb80fd 100%);
+}
+.side-profile {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #5d31d9;
+  background-color: #fff;
+}
+.side-profile img {
+  width: 30px;
+  height: 30px;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar ul li:nth-child(3) {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  height: 100px;
+}
+.sidebar ul li:nth-child(3) a {
+  color: #9753f6;
+}
+.sidebar ul li:nth-child(7) {
+  border: none;
+}
+.sidebar ul li {
+  padding: 10px;
+  border-bottom: 0.5px solid #fff;
+}
+.sidebar ul li a {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 10px 10px 10px;
+  color: #ffffff;
+}
+.sidebar ul li a img {
+  padding-top: 2px;
+  width: 35px;
+  height: 35px;
+}
+.sidebar ul li a span {
+  font-size: 1.5rem;
+  font-family: "Outfit", sans-serif;
+  font: 400;
+  opacity: 0.7;
+}
+.container {
+  background-color: #ffffff;
+  border-radius: 30px;
+  width: 80%;
+  height: auto;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  margin-bottom: 20px;
+  font-family: "Outfit", sans-serif;
+}
+.container .form-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  width: 100%;
+  border-bottom: 2px solid #c8bfbf;
+}
+.container .form-nav .inner-nav {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.container .form-nav .inner-nav ul {
+  padding-left: 20px;
+  display: flex;
+  list-style: none;
+  gap: 4rem;
+}
+.container .form-nav .inner-nav ul li a {
+  color: #934ff5;
+  font-family: "Outfit", sans-serif;
+  text-decoration: none;
+}
+.container .form-nav .inner-nav ul li:nth-child(5) a {
+  background-color: #a565f9;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #ffffff;
+  font-family: "Outfit", sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+}
+.container .form-nav button {
+  font-family: "Outfit", sans-serif;
+  color: #ffffff;
+  background-color: #a565f9;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+.container .inner-container {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.container .inner-container .btn {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.container .form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  width: 95%;
+  margin: 10px auto;
+  padding: 10px;
+}
+.container .form-container textarea {
+  border-radius: 20px;
+  border: 2px solid #45049d;
+  text-wrap: wrap;
+  width: 50%;
+  height: 250px;
+}
+.container .btn {
+  display: flex;
+  justify-content: center;
+}
+.container button {
+  font-family: "Outfit", sans-serif;
+  color: #ffffff;
+  background-color: #a565f9;
+  border: none;
+  padding: 8px 30px;
+  margin: 10px;
+}
+footer {
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer p {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+}
