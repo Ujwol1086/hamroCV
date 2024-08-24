@@ -1,4 +1,16 @@
 <?php
+
+  session_start();
+
+// Check if the user is logged in
+if (isset($_SESSION['fullName'])) {
+    $userName = $_SESSION['fullName'];
+} else {
+    // Redirect to login page if not logged in
+    header("Location: login.html");
+    exit();
+}
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -11,6 +23,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
 
 // Check if the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
