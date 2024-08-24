@@ -15,19 +15,19 @@ if ($conn->connect_error) {
 // Check if the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect data from form fields
-    $first_name = $_POST["first_name"];
-    $middle_name = $_POST["middle_name"]; // Optional field
-    $last_name = $_POST["last_name"];
+    $first_name = $_POST["fname"];
+    $middle_name = $_POST["mname"]; // Optional field
+    $last_name = $_POST["lname"];
     $gender = $_POST["gender"];
-    $birth_date = $_POST["birth_date"];
-    $marital_status = $_POST["marital_status"];
+    $birth_date = $_POST["dob"];
+    $marital_status = $_POST["mstatus"];
     $profession = $_POST["profession"];
-    $street_address = $_POST["street_address"];
+    $street_address = $_POST["saddr"];
     $city = $_POST["city"];
-    $state_province = $_POST["state_province"];
+    $state_province = $_POST["state-province"];
     $nationality = $_POST["nationality"];
-    $passport_number = $_POST["passport_number"]; // Optional field
-    $phone_number = $_POST["phone_number"];
+    $passport_number = $_POST["passport"]; // Optional field
+    $phone_number = $_POST["phnumber"];
     $email = $_POST["email"];
 
     // SQL query to insert form data into the newResume table
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Execute the query and check if successful
     if (mysqli_query($conn, $sql)) {
-        header("Location: login.html"); // Redirect to login page upon success
+        header("Location: experience.html"); 
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
