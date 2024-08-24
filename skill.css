@@ -217,8 +217,8 @@ aside {
   gap: 20px;
 }
 .container .inner-container .add-skill img {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 }
 .container .form-container .form-input {
   display: flex;
