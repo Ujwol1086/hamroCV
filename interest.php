@@ -1,13 +1,39 @@
 <?php
   session_start();
 
-// Check if the user is logged in
 if (isset($_SESSION['fullName'])) {
     $userName = $_SESSION['fullName'];
 } else {
     header("Location: login.html");
     exit();
 }
+$servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "hamroCV";
+
+  $conn = new mysqli($servername, $username, $password, $dbname);
+
+  if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+  }
+
+  if ($_SERVER["REQUEST_METHOD"] == "POST") {
+      $interest1 = $_POST['interest1'];
+      $interest2 = $_POST['interest2'];
+      $interest3 = $_POST['interest3'];
+
+      $sql = "INSERT INTO interests (user_name, interest1, interest2, interest3) VALUES ('$userName', '$interest1', '$interest2', '$interest3')";
+
+      if ($conn->query($sql) === TRUE) {
+          echo "New interests added successfully!";
+      } else {
+          echo "Error: " . $sql . "<br>" . $conn->error;
+      }
+  }
+
+  $conn->close();
+
 ?>
 
 <!DOCTYPE html>
@@ -121,7 +147,7 @@ if (isset($_SESSION['fullName'])) {
         </div>
       </aside>
       <main class="container">
-        <form action="#">
+        <form action="" method="post">
           <div class="form-nav">
             <div class="inner-nav">
               <ul>
@@ -140,9 +166,9 @@ if (isset($_SESSION['fullName'])) {
             <div class="form-container">
               <div class="form-input">
                 <h2>Interest / Hobbies</h2>
-                <input type="text" id="jobtitle" name="jobtitle" />
-                <input type="text" id="jobtitle" name="jobtitle" />
-                <input type="text" id="jobtitle" name="jobtitle" />
+                <input type="text" id="interest1" name="interest1" />
+                <input type="text" id="interest2" name="interest2" />
+                <input type="text" id="interest3" name="interest3" />
               </div>
             </div>
             <div class="add-skill">
@@ -151,7 +177,7 @@ if (isset($_SESSION['fullName'])) {
             </div>
             <div class="btn">
               <button>&lt;&lt; Previous</button>
-              <button>Save</button>
+              <button type="submit">Save</button>
               <button>Next &gt;&gt;</button>
             </div>
           </div>

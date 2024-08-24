@@ -8,6 +8,37 @@ if (isset($_SESSION['fullName'])) {
     header("Location: login.html");
     exit();
 }
+
+  $servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "hamroCV";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $facebook_link = $_POST['facebook'];
+    $instagram_link = $_POST['instagram'];
+    $linkedin_link = $_POST['linkedin'];
+    $website_link = $_POST['website'];
+
+    $sql = "INSERT INTO social_links ( facebook_link, instagram_link, linkedin_link, website_link, userName)
+            VALUES ( '$facebook_link', '$instagram_link', '$linkedin_link', '$website_link', '$userName')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Social links saved successfully!";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+$conn->close();
+
+
 ?>
 
 <!DOCTYPE html>
@@ -121,7 +152,7 @@ if (isset($_SESSION['fullName'])) {
         </div>
       </aside>
       <main class="container">
-        <form action="#">
+        <form action="" method="post">
           <div class="form-nav">
             <div class="inner-nav">
               <ul>
@@ -187,7 +218,7 @@ if (isset($_SESSION['fullName'])) {
             </div>
             <div class="btn">
               <button>&lt;&lt; Previous</button>
-              <button>Save</button>
+              <button type="submit">Save</button>
             </div>
           </div>
         </form>
