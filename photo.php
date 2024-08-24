@@ -1,3 +1,4 @@
+<!-- Photo -->
 <?php
   session_start();
 
