@@ -77,7 +77,7 @@ if (isset($_SESSION['fullName'])) {
               >
             </li>
             <li>
-              <a href="../hamroCV/myResume.html">
+              <a href="../hamroCV/myResume.php">
                 <img src="./Images/Dashboard-Image/Assets/resume.png" alt="" />
                 <span>My Resume</span></a
               >

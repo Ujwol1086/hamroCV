@@ -1,9 +1,52 @@
+<?php
+  session_start();
+
+// Check if the user is logged in
+if (isset($_SESSION['fullName'])) {
+    $userName = $_SESSION['fullName'];
+} else {
+    header("Location: login.html");
+    exit();
+}
+
+$servername = "localhost";
+$username = "root"; 
+$password = ""; 
+$dbname = "hamroCV";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $jobTitle = $_POST['jobtitle'];
+    $employer = $_POST['employer'];
+    $city = $_POST['city'];
+    $state = $_POST['state'];
+    $startDate = $_POST['sdate'];
+    $endDate = $_POST['edate'];
+
+    $sql = "INSERT INTO experience (job_title, employer, city, state, start_date, end_date)
+            VALUES ('$jobTitle', '$employer', '$city', '$state', '$startDate', '$endDate')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+}
+
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="myResume.css" />
+    <link rel="stylesheet" href="experience.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,7 +79,8 @@
         </div>
         <div class="profile">
           <img src="./Images/Dashboard-Image/Assets/Profile_image.png" alt="" />
-          <h3>Admin</h3>
+          <h3><?php echo $userName; ?></h3>
+          <a href="logout.php" class="logout-button">Logout</a>
         </div>
       </nav>
     </header>
@@ -50,7 +94,7 @@
                   src="./Images/Dashboard-Image/Assets/Profile_image2.png"
                   alt=""
                 />
-                <span>Admin</span>
+                <span><?php echo $userName; ?></span>
               </a>
             </li>
             <li>
@@ -63,7 +107,7 @@
               >
             </li>
             <li>
-              <a href="../hamroCV/myResume.html">
+              <a href="../hamroCV/myResume.php">
                 <img
                   src="./Images/Dashboard-Image/Assets/resume_active.png"
                   alt=""
@@ -108,52 +152,55 @@
         </div>
       </aside>
       <main class="container">
-        <a href="../hamroCV/newResume.html">
-          <div class="box">
-            <img
-              src="./Images/Dashboard-Image/Assets/Carousel-Plus.png"
-              alt=""
-            />
-            <p>New Resume</p>
-          </div>
-        </a>
-        <div class="myresume">
-          <div class="resume-image">
-            <!-- <img src="./Images/Dashboard-Image/Assets/cv-1.jpg" alt="" /> -->
-            <p>&nbsp;&nbsp;Select</p>
-            <p>Template</p>
-          </div>
-          <div class="myresume-content">
-            <h3>Resume name</h3>
-            <div class="completion">
-              <p>Completion</p>
-              <p>50%</p>
+        <form action="" method="post">
+          <div class="form-nav">
+            <div class="inner-nav">
+              <ul>
+                <li><a href="../hamroCV/newResume.php">Profile</a></li>
+                <li><a href="#">Experience</a></li>
+                <li><a href="../hamroCV/skill.php">Skill</a></li>
+                <li><a href="../hamroCV/education.php">Education</a></li>
+                <li><a href="../hamroCV/summary.php">Summary</a></li>
+                <li><a href="../hamroCV/interest.php">Interest</a></li>
+                <li><a href="../hamroCV/photo.php">Photo</a></li>
+              </ul>
             </div>
-            <div class="progress-container">
-              <div class="progress-bar" id="progressBar"></div>
-            </div>
-            <div class="buttons">
-              <button class="edit">
-                <p>Edit</p>
-                <img src="./Images/Dashboard-Image/Assets/edit.png" alt="" />
-              </button>
-              <div class="other-btn">
-                <button class="download">
-                  <img
-                    src="./Images/Dashboard-Image/Assets/download.png"
-                    alt=""
-                  />
-                </button>
-                <button class="print">
-                  <img src="./Images/Dashboard-Image/Assets/print.png" alt="" />
-                </button>
-                <button class="more1">
-                  <img src="./Images/Dashboard-Image/Assets/more.png" alt="" />
-                </button>
+            <button>+ Add Section</button>
+          </div>
+          <div class="inner-container">
+            <div class="form-container">
+              <div class="form-input">
+                <label for="jobtitle">Job Title</label>
+                <input type="text" id="jobtitle" name="jobtitle" />
+              </div>
+              <div class="form-input">
+                <label for="employer">Employer</label>
+                <input type="text" id="employer" name="employer" />
+              </div>
+              <div class="form-input">
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" />
+              </div>
+              <div class="form-input">
+                <label for="state">State</label>
+                <input type="text" id="state" name="state" />
+              </div>
+              <div class="form-input">
+                <label for="sdate">Start Date</label>
+                <input type="date" id="sdate" name="sdate" />
+              </div>
+              <div class="form-input">
+                <label for="edate">End Date</label>
+                <input type="date" id="edate" name="edate" />
               </div>
             </div>
+            <div class="btn">
+              <button>&lt;&lt; Previous</button>
+              <button type="submit">Save</button>
+              <button type="submit" >Next &gt;&gt;</button>
+            </div>
           </div>
-        </div>
+        </form>
       </main>
     </section>
     <footer>

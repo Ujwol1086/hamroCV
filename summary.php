@@ -1,9 +1,21 @@
+<?php
+  session_start();
+
+// Check if the user is logged in
+if (isset($_SESSION['fullName'])) {
+    $userName = $_SESSION['fullName'];
+} else {
+    header("Location: login.html");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="photo.css" />
+    <link rel="stylesheet" href="summary.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,7 +48,8 @@
         </div>
         <div class="profile">
           <img src="./Images/Dashboard-Image/Assets/Profile_image.png" alt="" />
-          <h3>Admin</h3>
+          <h3><?php echo $userName; ?></h3>
+          <a href="logout.php" class="logout-button">Logout</a>
         </div>
       </nav>
     </header>
@@ -50,7 +63,7 @@
                   src="./Images/Dashboard-Image/Assets/Profile_image2.png"
                   alt=""
                 />
-                <span>Admin</span>
+                <span><?php echo $userName; ?></span>
               </a>
             </li>
             <li>
@@ -63,7 +76,7 @@
               >
             </li>
             <li>
-              <a href="../hamroCV/myResume.html">
+              <a href="../hamroCV/myResume.php">
                 <img
                   src="./Images/Dashboard-Image/Assets/resume_active.png"
                   alt=""
@@ -112,69 +125,26 @@
           <div class="form-nav">
             <div class="inner-nav">
               <ul>
-                <li><a href="../hamroCV/newResume.html">Profile</a></li>
-                <li><a href="../hamroCV/experience.html">Experience</a></li>
-                <li><a href="../hamroCV/skill.html">Skill</a></li>
-                <li><a href="../hamroCV/education.html">Education</a></li>
-                <li><a href="../hamroCV/summary.html">Summary</a></li>
-                <li><a href="../hamroCV/interest.html">Interest</a></li>
-                <li><a href="#">Photo</a></li>
+                <li><a href="../hamroCV/newResume.php">Profile</a></li>
+                <li><a href="../hamroCV/experience.php">Experience</a></li>
+                <li><a href="../hamroCV/skill.php">Skill</a></li>
+                <li><a href="../hamroCV/education.php">Education</a></li>
+                <li><a href="#">Summary</a></li>
+                <li><a href="../hamroCV/interest.php">Interest</a></li>
+                <li><a href="../hamroCV/photo.php">Photo</a></li>
               </ul>
             </div>
             <button>+ Add Section</button>
           </div>
           <div class="inner-container">
-            <div class="photo-container">
-              <div class="photo">
-                <div class="photo-image"></div>
-                <a href="#">Upload Your Photo</a>
-              </div>
-              <div class="photo-content">
-                <h3>CV Photo Tips</h3>
-                <ul>
-                  <li>
-                    &#9866; Your Final photo should show your head, neck and
-                    shoulders only
-                  </li>
-                  <li>
-                    &#9866; Your photo will appear 3.5cm wide by 4.5cm cm tall
-                  </li>
-                  <li>&#9866; Acceptable formats: .JPG, .GIF, .PNG</li>
-                </ul>
-                <p>File size is limited to 2 MB</p>
-                <p>
-                  <strong>Warning:</strong> Including a photo with your CV is
-                  not recomended when applying for jobs in the United Kingdom,
-                  the United States or Canada. Only use this template if you
-                  intend to apply for jobs outside these areas or have a
-                  specific need for a CV that includes a photo. Otherwise,
-                  please click the Finish button to Download Resume.
-                </p>
-
-                <h2>Add Social Links</h2>
-                <div class="social-links">
-                  <div class="form-input">
-                    <label for="facebook">Facebook</label>
-                    <input type="text" id="facebook" name="facebook" />
-                  </div>
-                  <div class="form-input">
-                    <label for="instagram">Instagram</label>
-                    <input type="text" id="instagram" name="instagram" />
-                  </div>
-                  <div class="form-input">
-                    <label for="linkedin">LinkedIn</label>
-                    <input type="text" id="linkedin" name="linkedin" />
-                  </div>
-                  <div class="form-input">
-                    <label for="website">Website</label>
-                    <input type="text" id="website" name="website" />
-                  </div>
-                </div>
-              </div>
+            <div class="form-container">
+              <h3>Professional Summary</h3>
+              <textarea class="summary-box"> </textarea>
             </div>
             <div class="btn">
               <button>&lt;&lt; Previous</button>
               <button>Save</button>
+              <button>Next &gt;&gt;</button>
             </div>
           </div>
         </form>

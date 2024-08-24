@@ -1,9 +1,21 @@
+<?php
+  session_start();
+
+// Check if the user is logged in
+if (isset($_SESSION['fullName'])) {
+    $userName = $_SESSION['fullName'];
+} else {
+    header("Location: login.html");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="education.css" />
+    <link rel="stylesheet" href="interest.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,7 +48,8 @@
         </div>
         <div class="profile">
           <img src="./Images/Dashboard-Image/Assets/Profile_image.png" alt="" />
-          <h3>Admin</h3>
+          <h3><?php echo $userName; ?></h3>
+          <a href="logout.php" class="logout-button">Logout</a>
         </div>
       </nav>
     </header>
@@ -50,7 +63,7 @@
                   src="./Images/Dashboard-Image/Assets/Profile_image2.png"
                   alt=""
                 />
-                <span>Admin</span>
+                <span><?php echo $userName; ?></span>
               </a>
             </li>
             <li>
@@ -63,7 +76,7 @@
               >
             </li>
             <li>
-              <a href="../hamroCV/myResume.html">
+              <a href="../hamroCV/myResume.php">
                 <img
                   src="./Images/Dashboard-Image/Assets/resume_active.png"
                   alt=""
@@ -112,13 +125,13 @@
           <div class="form-nav">
             <div class="inner-nav">
               <ul>
-                <li><a href="../hamroCV/newResume.html">Profile</a></li>
-                <li><a href="../hamroCV/experience.html">Experience</a></li>
-                <li><a href="../hamroCV/skill.html">Skill</a></li>
-                <li><a href="#">Education</a></li>
-                <li><a href="../hamroCV/summary.html">Summary</a></li>
-                <li><a href="../hamroCV/interest.html">Interest</a></li>
-                <li><a href="../hamroCV/photo.html">Photo</a></li>
+                <li><a href="../hamroCV/newResume.php">Profile</a></li>
+                <li><a href="../hamroCV/experience.php">Experience</a></li>
+                <li><a href="../hamroCV/skill.php">Skill</a></li>
+                <li><a href="../hamroCV/education.php">Education</a></li>
+                <li><a href="../hamroCV/summary.php">Summary</a></li>
+                <li><a href="../hamroCV/interest.php">Interest</a></li>
+                <li><a href="../hamroCV/photo.php">Photo</a></li>
               </ul>
             </div>
             <button>+ Add Section</button>
@@ -126,46 +139,15 @@
           <div class="inner-container">
             <div class="form-container">
               <div class="form-input">
-                <label for="institue">Insitute Name</label>
-                <input type="text" id="institue" name="institue" />
+                <h2>Interest / Hobbies</h2>
+                <input type="text" id="jobtitle" name="jobtitle" />
+                <input type="text" id="jobtitle" name="jobtitle" />
+                <input type="text" id="jobtitle" name="jobtitle" />
               </div>
-              <div class="form-input">
-                <label for="city">City</label>
-                <input type="text" id="city" name="city" />
-              </div>
-              <div class="form-input">
-                <label for="state">State</label>
-                <input type="text" id="state" name="state" />
-              </div>
-              <div class="form-input">
-                <label for="degree">Degree</label>
-                <select name="degree" id="degree">
-                  <option value="select">Select</option>
-                  <option value="Bachelor of Science in Computer Science and Information Technology">Bachelor of Science in Computer Science and Information Technology (BSc CSIT)</option>
-                  <option value="Bachelor of Business Administration">Bachelor of Business Administration (BBA)</option>
-                  <option value="Bachelor of Business Management">Bachelor of Business Management (BBM)</option>
-                  <option value="Bachelor of Information Management">Bachelor of Information Management (BIM)</option>
-                  <option value="Bachelor of Business Studies">Bachelor of Business Studies (BBS)</option>
-                  <option value="Bachelor of Engineering in Civil">Bachelor of Engineering in Civil (BE Civil)</option>
-                  <option value="Bachelor of Engineering in Computer">Bachelor of Engineering in Computer (BE Computer)</option>
-                  <option value="Bachelor of Science in Nursing">Bachelor of Science in Nursing (BSc Nursing)</option>
-                  <option value="Bachelor of Education">Bachelor of Education (BEd)</option>
-                  <option value="Bachelor of Public Health">Bachelor of Public Health (BPH)</option>
-                  <option value="Bachelor of Hotel Management">Bachelor of Hotel Management (BHM)</option>
-                  <option value="Bachelor of Laws">Bachelor of Laws (LLB)</option>
-                  <option value="Bachelor of Fine Arts">Bachelor of Fine Arts (BFA)</option>
-                  <option value="Bachelor of Arts in Social Work">Bachelor of Arts in Social Work (BASW)</option>
-                  <option value="Bachelor of Computer Application">Bachelor of Computer Application (BCA)</option>
-                </select>
-              </div>
-              <div class="form-input">
-                <label for="gsdate">Graduation Start Date</label>
-                <input type="date" id="sdate" name="sdate" />
-              </div>
-              <div class="form-input">
-                <label for="gedate">Graduation End Date</label>
-                <input type="date" id="edate" name="edate" />
-              </div>
+            </div>
+            <div class="add-skill">
+              <img src="./Images/Dashboard-Image/Assets/addmore.png" alt="" />
+              <p>Add More Interest</p>
             </div>
             <div class="btn">
               <button>&lt;&lt; Previous</button>

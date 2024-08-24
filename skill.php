@@ -1,9 +1,21 @@
+<?php
+  session_start();
+
+// Check if the user is logged in
+if (isset($_SESSION['fullName'])) {
+    $userName = $_SESSION['fullName'];
+} else {
+    header("Location: login.html");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="experience.css" />
+    <link rel="stylesheet" href="skill.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,7 +48,8 @@
         </div>
         <div class="profile">
           <img src="./Images/Dashboard-Image/Assets/Profile_image.png" alt="" />
-          <h3>Admin</h3>
+          <h3><?php echo $userName; ?></h3>
+          <a href="logout.php" class="logout-button">Logout</a>
         </div>
       </nav>
     </header>
@@ -50,7 +63,7 @@
                   src="./Images/Dashboard-Image/Assets/Profile_image2.png"
                   alt=""
                 />
-                <span>Admin</span>
+                <span><?php echo $userName; ?></span>
               </a>
             </li>
             <li>
@@ -63,7 +76,7 @@
               >
             </li>
             <li>
-              <a href="../hamroCV/myResume.html">
+              <a href="../hamroCV/myResume.php">
                 <img
                   src="./Images/Dashboard-Image/Assets/resume_active.png"
                   alt=""
@@ -112,13 +125,13 @@
           <div class="form-nav">
             <div class="inner-nav">
               <ul>
-                <li><a href="../hamroCV/newResume.html">Profile</a></li>
-                <li><a href="#">Experience</a></li>
-                <li><a href="../hamroCV/skill.html">Skill</a></li>
-                <li><a href="../hamroCV/education.html">Education</a></li>
-                <li><a href="../hamroCV/summary.html">Summary</a></li>
-                <li><a href="../hamroCV/interest.html">Interest</a></li>
-                <li><a href="../hamroCV/photo.html">Photo</a></li>
+                <li><a href="../hamroCV/newResume.php">Profile</a></li>
+                <li><a href="../hamroCV/experience.php">Experience</a></li>
+                <li><a href="../hamroCV/skill.php">Skill</a></li>
+                <li><a href="../hamroCV/education.php">Education</a></li>
+                <li><a href="../hamroCV/summary.php">Summary</a></li>
+                <li><a href="../hamroCV/interest.php">Interest</a></li>
+                <li><a href="../hamroCV/photo.php">Photo</a></li>
               </ul>
             </div>
             <button>+ Add Section</button>
@@ -126,29 +139,69 @@
           <div class="inner-container">
             <div class="form-container">
               <div class="form-input">
-                <label for="jobtitle">Job Title</label>
+                <label for="jobtitle">Skill</label>
                 <input type="text" id="jobtitle" name="jobtitle" />
               </div>
               <div class="form-input">
-                <label for="employer">Employer</label>
-                <input type="text" id="employer" name="employer" />
+                <label for="employer">Level</label>
+                <select>
+                  <option value="select">Select</option>
+                  <option value="select">Novice</option>
+                  <option value="select">Beginner</option>
+                  <option value="select">Intermediate</option>
+                  <option value="select">Professional</option>
+                  <option value="select">Expert</option>
+                </select>
               </div>
               <div class="form-input">
-                <label for="city">City</label>
-                <input type="text" id="city" name="city" />
+                <label for="jobtitle">Skill</label>
+                <input type="text" id="jobtitle" name="jobtitle" />
               </div>
               <div class="form-input">
-                <label for="state">State</label>
-                <input type="text" id="state" name="state" />
+                <label for="employer">Level</label>
+                <select>
+                  <option value="select">Select</option>
+                  <option value="select">Novice</option>
+                  <option value="select">Beginner</option>
+                  <option value="select">Intermediate</option>
+                  <option value="select">Professional</option>
+                  <option value="select">Expert</option>
+                </select>
               </div>
               <div class="form-input">
-                <label for="sdate">Start Date</label>
-                <input type="date" id="sdate" name="sdate" />
+                <label for="jobtitle">Skill</label>
+                <input type="text" id="jobtitle" name="jobtitle" />
               </div>
               <div class="form-input">
-                <label for="edate">End Date</label>
-                <input type="date" id="edate" name="edate" />
+                <label for="employer">Level</label>
+                <select>
+                  <option value="select">Select</option>
+                  <option value="select">Novice</option>
+                  <option value="select">Beginner</option>
+                  <option value="select">Intermediate</option>
+                  <option value="select">Professional</option>
+                  <option value="select">Expert</option>
+                </select>
               </div>
+              <div class="form-input">
+                <label for="jobtitle">Skill</label>
+                <input type="text" id="jobtitle" name="jobtitle" />
+              </div>
+              <div class="form-input">
+                <label for="employer">Level</label>
+                <select>
+                  <option value="select">Select</option>
+                  <option value="select">Novice</option>
+                  <option value="select">Beginner</option>
+                  <option value="select">Intermediate</option>
+                  <option value="select">Professional</option>
+                  <option value="select">Expert</option>
+                </select>
+              </div>
+            </div>
+            <div class="add-skill">
+              <img src="./Images/Dashboard-Image/Assets/addmore.png" alt="" />
+              <p>Add More Skill</p>
             </div>
             <div class="btn">
               <button>&lt;&lt; Previous</button>

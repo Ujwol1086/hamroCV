@@ -1,9 +1,22 @@
+<?php
+  session_start();
+
+// Check if the user is logged in
+if (isset($_SESSION['fullName'])) {
+    $userName = $_SESSION['fullName'];
+} else {
+    // Redirect to login page if not logged in
+    header("Location: login.html");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="interest.css" />
+    <link rel="stylesheet" href="myResume.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,7 +49,7 @@
         </div>
         <div class="profile">
           <img src="./Images/Dashboard-Image/Assets/Profile_image.png" alt="" />
-          <h3>Admin</h3>
+          <h3><?php echo $userName;  ?></h3>
         </div>
       </nav>
     </header>
@@ -50,7 +63,7 @@
                   src="./Images/Dashboard-Image/Assets/Profile_image2.png"
                   alt=""
                 />
-                <span>Admin</span>
+                <span><?php echo $userName; ?></span>
               </a>
             </li>
             <li>
@@ -108,41 +121,52 @@
         </div>
       </aside>
       <main class="container">
-        <form action="#">
-          <div class="form-nav">
-            <div class="inner-nav">
-              <ul>
-                <li><a href="../hamroCV/newResume.html">Profile</a></li>
-                <li><a href="../hamroCV/experience.html">Experience</a></li>
-                <li><a href="../hamroCV/skill.html">Skill</a></li>
-                <li><a href="../hamroCV/education.html">Education</a></li>
-                <li><a href="../hamroCV/summary.html">Summary</a></li>
-                <li><a href="../hamroCV/interest.html">Interest</a></li>
-                <li><a href="../hamroCV/photo.html">Photo</a></li>
-              </ul>
-            </div>
-            <button>+ Add Section</button>
+        <a href="../hamroCV/newResume.php">
+          <div class="box">
+            <img
+              src="./Images/Dashboard-Image/Assets/Carousel-Plus.png"
+              alt=""
+            />
+            <p>New Resume</p>
           </div>
-          <div class="inner-container">
-            <div class="form-container">
-              <div class="form-input">
-                <h2>Interest / Hobbies</h2>
-                <input type="text" id="jobtitle" name="jobtitle" />
-                <input type="text" id="jobtitle" name="jobtitle" />
-                <input type="text" id="jobtitle" name="jobtitle" />
+        </a>
+        <div class="myresume">
+          <div class="resume-image">
+            <!-- <img src="./Images/Dashboard-Image/Assets/cv-1.jpg" alt="" /> -->
+            <p>&nbsp;&nbsp;Select</p>
+            <p>Template</p>
+          </div>
+          <div class="myresume-content">
+            <h3>Resume name</h3>
+            <div class="completion">
+              <p>Completion</p>
+              <p>50%</p>
+            </div>
+            <div class="progress-container">
+              <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <div class="buttons">
+              <button class="edit">
+                <p>Edit</p>
+                <img src="./Images/Dashboard-Image/Assets/edit.png" alt="" />
+              </button>
+              <div class="other-btn">
+                <button class="download">
+                  <img
+                    src="./Images/Dashboard-Image/Assets/download.png"
+                    alt=""
+                  />
+                </button>
+                <button class="print">
+                  <img src="./Images/Dashboard-Image/Assets/print.png" alt="" />
+                </button>
+                <button class="more1">
+                  <img src="./Images/Dashboard-Image/Assets/more.png" alt="" />
+                </button>
               </div>
             </div>
-            <div class="add-skill">
-              <img src="./Images/Dashboard-Image/Assets/addmore.png" alt="" />
-              <p>Add More Interest</p>
-            </div>
-            <div class="btn">
-              <button>&lt;&lt; Previous</button>
-              <button>Save</button>
-              <button>Next &gt;&gt;</button>
-            </div>
           </div>
-        </form>
+        </div>
       </main>
     </section>
     <footer>
