@@ -30,6 +30,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
+     if (mysqli_query($conn, $sql)) {
+        header("Location: interest.php"); 
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 
     $conn->close();
 }

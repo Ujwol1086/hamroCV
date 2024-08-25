@@ -36,6 +36,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Please select a valid skill level.";
     }
+     if (mysqli_query($conn, $sql)) {
+        header("Location: education.php"); 
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 }
 
 $conn->close();

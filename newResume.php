@@ -57,10 +57,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Execute the query and check if successful
     if (mysqli_query($conn, $sql)) {
-        header("Location: experience.html"); 
+        header("Location: experience.php"); 
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
+    
 }
 
 // Close the database connection

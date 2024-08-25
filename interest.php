@@ -31,6 +31,12 @@ $servername = "localhost";
       } else {
           echo "Error: " . $sql . "<br>" . $conn->error;
       }
+
+       if (mysqli_query($conn, $sql)) {
+        header("Location: photo.php"); 
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
   }
 
   $conn->close();
